@@ -7,7 +7,6 @@ const initial_state = {
 const userListReducer = (state = initial_state, action) => {
 	switch (action.type) {
 		case GET_USERS:
-			console.log(action);
 			return { userList: action.payload};
 		default:
 			return state;

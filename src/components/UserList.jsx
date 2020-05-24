@@ -12,7 +12,6 @@ export class UserList extends Component {
 		return (
 			<div>
 				<h2>User List</h2>
-				{JSON.stringify(this.props)}
 			</div>
 		)
 	}
