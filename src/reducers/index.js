@@ -1,13 +1,7 @@
-import { GET_USERS } from "../constants/action-type";
+import { combineReducers } from "redux";
+import userListReducer from "./usersReducer";
 
 
-export const userListReducer = (state, action) => {
-	switch (action.type) {
-		case GET_USERS:
-
-			break;
-		default:
-			return state;
-			break;
-	}
-};
+export default combineReducers({
+	users: userListReducer
+})
