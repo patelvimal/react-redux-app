@@ -11,7 +11,7 @@ export class UserList extends Component {
 	render() {
 		return (
 			<div>
-				<h2>User List</h2>
+				<h4>User List</h4>
 			</div>
 		)
 	}

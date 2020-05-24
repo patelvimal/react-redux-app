@@ -5,7 +5,7 @@ export class Navbar extends Component {
     render() {
         return (
             <div>
-                <h2>Navbar</h2>
+                <h2>React-Redux-App</h2>
             </div>
         )
     }
