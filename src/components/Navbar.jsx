@@ -1,6 +1,6 @@
-import React,{Component  } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { BrowserRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
     render() {
@@ -8,8 +8,9 @@ export class Navbar extends Component {
             <div>
                 <h2>React-Redux-App</h2>
                 <div>
-                    <Link to="/">Home</Link>
-                    <Link to="/login">Login</Link>
+                    <Link to="/" className='pad-4'>Home</Link>
+                    <Link to="/login" className='pad-4'>Login</Link>
+                    <Link to="/register" className='pad-4'>Register</Link>
                 </div>
             </div>
         )

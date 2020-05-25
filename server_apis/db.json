@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "name": "sdf",
+      "email": "sdfsdfsdf",
+      "id": 1
+    },
+    {
+      "name": "34",
+      "email": "3434",
+      "id": 2
+    },
+    {
+      "function(){return!window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__": "",
+      "a.dispatch.apply(a,arguments)}": "",
+      "id": 3
+    },
+    {
+      "function(){return!window.__REDUX_DEVTOOLS_EXTENSION_LOCKED__": "",
+      "a.dispatch.apply(a,arguments)}": "",
+      "id": 4
+    },
+    {
+      "name": "43",
+      "email": "45",
+      "id": 5
+    }
+  ],
+  "posts": []
+}

@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
+import { connect } from 'react-redux';
+import { registerUser } from '../actions';
 
-export class Login extends Component {
+export class Register extends Component {
 
     renderError = ({ error, touched }) => {
         if (touched && error ) {
             return (
                 <div>
                     {error}
-                </div>
-            )
+                </div>)
         }
     }
 
@@ -35,6 +36,9 @@ export class Login extends Component {
 
 
     onSubmit = (formValues) => {
+        console.log(this.props);
+        this.props.registerUser(formValues);
+        //this.props.dispatch(registerUser(formValues));
     }
 
     render() {
@@ -46,7 +50,7 @@ export class Login extends Component {
                     label="User Name"
                 />
                 <Field
-                    name="name"
+                    name="email"
                     component={this.renderInput}
                     label="Email"
                 />
@@ -67,14 +71,17 @@ const validate = (formValues) => {
     if (!formValues.name) {
         error.name = "UserName is required";
     }
-    if (!formValues.password) {
-        error.password = "Password is required";
+    if (!formValues.email) {
+        error.email = "Email is required";
     }
     console.log(error);
     return error;
 }
 
-export default reduxForm({
+const formWrapper = reduxForm({
     form: 'login',
     validate
-})(Login)
+})(Register)
+
+
+export default connect(null,{registerUser})(formWrapper);
