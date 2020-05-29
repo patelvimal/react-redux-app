@@ -1,10 +1,6 @@
 {
   "users": [],
   "books": [{
-    "title":"Sample Book",
-    "author": "Unknown",
-    "publisher":"Mystery",
-    "publishedDate":"24th june",
-    "image": ""
+    "title":"Sample"
   }]
 }

@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom'
 export class Navbar extends Component {
     render() {
         return (
-            <div>
-                <h2>React-Redux-App</h2>
-                <div>
-                    <Link to="/" className='pad-4'>Home</Link>
+            <div className="header">
+                <h3>E-Book Shop</h3>
+                {/* <div>
                     <Link to="/login" className='pad-4'>Login</Link>
                     <Link to="/register" className='pad-4'>Register</Link>
-                </div>
+                </div> */}
             </div>
         )
     }

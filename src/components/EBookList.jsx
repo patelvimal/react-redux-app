@@ -1,26 +1,37 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getBooks } from '../actions/eBook-actions'
+import  Model  from './Model';
 
 export class BookList extends Component {
 
     componentDidMount = () => {
-        this.props.getBooks();
+        console.log(this.props)
+        this.props.dispatch(getBooks());
+    }
+
+    componentDidUpdate = () => {
+        console.log(this.props);
     }
 
     render() {
         return (
             <div>
-                BookList
-                {JSON.stringify(this.props.eBook)}
+                <div><button>Add Book</button></div>
+               {
+                   this.props.bookList && this.props.bookList.map(book=>(
+                       <div key="1">{book.title}</div>
+                   ))
+               }
+               <Model><h2>I am in a Model</h2></Model>
             </div>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    eBook: state.eBook.list
+    bookList: state.eBook.list
 })
 
 
-export default connect(mapStateToProps, {getBooks})(BookList)
+export default connect(mapStateToProps)(BookList)
