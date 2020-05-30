@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './components/App';
 import store from './store';
-import './index.css';
+import App from './containers/App';
 
 function RootApp() {
 	return (
 		<Provider store={store}>
-			<App />
+			<App/>
 		</Provider>
 	);
 }

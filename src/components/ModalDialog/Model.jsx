@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import { closeModal } from '../actions/modal-dialog';
+import { closeModal } from '../../actions/modal-dialog';
 
 
 
