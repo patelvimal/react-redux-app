@@ -36,7 +36,6 @@ export class Register extends Component {
 
 
     onSubmit = (formValues) => {
-        console.log(this.props);
         this.props.registerUser(formValues);
         //this.props.dispatch(registerUser(formValues));
     }
@@ -74,7 +73,6 @@ const validate = (formValues) => {
     if (!formValues.email) {
         error.email = "Email is required";
     }
-    console.log(error);
     return error;
 }
 

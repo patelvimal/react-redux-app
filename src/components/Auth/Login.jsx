@@ -70,7 +70,6 @@ const validate = (formValues) => {
     if (!formValues.password) {
         error.password = "Password is required";
     }
-    console.log(error);
     return error;
 }
 
