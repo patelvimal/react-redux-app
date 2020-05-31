@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import { reduxForm, Field } from 'redux-form'
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { registerUser } from '../actions';
+import { Field, reduxForm } from 'redux-form';
 
 export class Register extends Component {
 
@@ -82,4 +81,4 @@ const formWrapper = reduxForm({
 })(Register)
 
 
-export default connect(null,{registerUser})(formWrapper);
+export default connect()(formWrapper);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getDialogStatus } from './modalAction';
 import ModalDialog from '../../components/ModalDialog/ModalDialog';
 
 export class ModalDialogContainer extends Component {
