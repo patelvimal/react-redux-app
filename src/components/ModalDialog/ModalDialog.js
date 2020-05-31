@@ -6,14 +6,17 @@ import './ModalDialog.scss';
 const ModalDialog = (props)=> {
 
     const closeDialog = () => {
-        props.onClose();
+        if (typeof props.onClose === 'function') {
+            props.onClose();
+        }
     }
-    console.log(props);
+
     return  props.show ? (
         ReactDOM.createPortal(
             <div id="myModal" className="modal">
                 <div className="modal-dialog">
                     <div className="modal-header">
+                        <div>{props.title}</div>
                         <div className="close"><button onClick={closeDialog}>Close</button></div>
                     </div>
                     <div className="modal-content">

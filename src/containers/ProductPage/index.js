@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import AddProduct from '../../components/Product/AddProduct';
 import ProductList from '../../components/Product/ProductList';
 import Button from '../../components/UIControls/Button/Button';
 import { ModalDialogContainer } from '../ModalDialog';
 import { getProducts } from './productAction';
-import AddProduct from '../../components/Product/AddProduct';
 
 export class ProductPage extends Component {
 
@@ -31,12 +31,20 @@ export class ProductPage extends Component {
         })
     }
 
+    handleProductSave = (formValues)=>{
+        console.log(formValues);
+    }
+
     render() {
         return (
             <div>
                 <Button text="Add Product" onClick={this.addProduct}></Button>
-                <ModalDialogContainer show={this.state.dialogStatus} onClose={this.dialogClose}>
-                    <AddProduct/>
+                <ModalDialogContainer 
+                    show={this.state.dialogStatus} 
+                    onClose={this.dialogClose}
+                    title="Add Product"
+                >
+                    <AddProduct onSubmit={this.handleProductSave}/>
                 </ModalDialogContainer>
                 <ProductList products={this.props.products} />
             </div>

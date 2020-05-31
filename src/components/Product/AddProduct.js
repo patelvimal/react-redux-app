@@ -1,7 +1,8 @@
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-import Textbox from '../UIControls/Textbox/Textbox'
-import Button from '../UIControls/Button/Button'
+import React from 'react';
+import { Field, reduxForm } from 'redux-form';
+import Button from '../UIControls/Button/Button';
+import Textarea from '../UIControls/Textarea/Textarea';
+import Textbox from '../UIControls/Textbox/Textbox';
 
 const renderInput = ({ input, label, meta }) => {
     return (
@@ -12,26 +13,34 @@ const renderInput = ({ input, label, meta }) => {
     )
 };
 
+function AddProduct(props) {
 
-function AddProduct() {
+    const onSave = (formValues) => {
+        props.handleSubmit(props.onSubmit);
+    }
+
     return (
         <form>
             <Field
-                name="name"
+                name="name1"
                 label="Product Name"
                 component={renderInput}
             />
              <Field
-                name="name1"
+                name="name"
                 label="Product Name"
                 component={Textbox}
             />
-            <Button text="Submit"/>
+            <Field
+                name="description"
+                label="Product Description"
+                component={Textarea}
+            />
+            <Button text="Save" onClick={props.handleSubmit(props.onSubmit)}/>
+            <Button text="Close"/>
         </form>
     )
 }
 
-export default reduxForm({
-    form: 'login'
-})(AddProduct)
+export default reduxForm({form: 'saveProduct'})(AddProduct)
 
