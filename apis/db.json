@@ -1,4 +1,25 @@
 {
   "users": [],
-  "products": []
+  "products": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "category": 2,
+      "status": true,
+      "name": "asd",
+      "description": "asdasdasdasd",
+      "id": 3
+    },
+    {
+      "category": 2,
+      "status": true,
+      "name": "working",
+      "description": "working",
+      "id": 4
+    }
+  ]
 }

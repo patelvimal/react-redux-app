@@ -4,7 +4,7 @@ import AddProduct from '../../components/Product/AddProduct';
 import ProductList from '../../components/Product/ProductList';
 import Button from '../../components/UIControls/Button/Button';
 import { ModalDialogContainer } from '../ModalDialog';
-import { getProducts } from './productAction';
+import { getProducts, saveProduct } from './productAction';
 
 export class ProductPage extends Component {
 
@@ -32,7 +32,7 @@ export class ProductPage extends Component {
     }
 
     handleProductSave = (formValues)=>{
-        console.log(formValues);
+        this.props.dispatch(saveProduct(formValues))
     }
 
     render() {

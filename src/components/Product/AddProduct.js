@@ -42,10 +42,20 @@ function AddProduct(props) {
     )
 }
 
+const validate = (formValues) => {
+    var errors={};
+    if (!formValues.name) {
+        errors.name="Product Name is required";
+    }
+    if (!formValues.description) {
+        errors.name="Product Description is required";
+    }
+    return errors;
+}
 const initialValues = {
     category : 2,
     status:true,
     name:''
 }
-export default reduxForm({ form: 'saveProduct', initialValues })(AddProduct)
+export default reduxForm({ form: 'saveProduct', initialValues, validate })(AddProduct)
 
