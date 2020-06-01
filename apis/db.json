@@ -2,24 +2,18 @@
   "users": [],
   "products": [
     {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "category": 2,
-      "status": true,
-      "name": "asd",
-      "description": "asdasdasdasd",
-      "id": 3
-    },
-    {
       "category": 2,
       "status": true,
       "name": "working",
-      "description": "working",
-      "id": 4
+      "description": "fine",
+      "id": 1
+    },
+    {
+      "category": 2,
+      "status": true,
+      "name": "ghdfg dsfdsf ",
+      "description": "sdf sdf sdf sdfsdf",
+      "id": 2
     }
   ]
 }
