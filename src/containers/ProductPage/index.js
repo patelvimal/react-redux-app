@@ -15,9 +15,8 @@ export class ProductPage extends Component {
         }
     }
     componentDidMount = () => {
-        this.props.dispatch(getProducts());
+        this.props.dispatch(getProducts);
     }
-
 
     dialogClose = () => {
         this.setState({
@@ -38,6 +37,7 @@ export class ProductPage extends Component {
     render() {
         return (
             <div>
+                <h3>Product page</h3>
                 <Button text="Add Product" onClick={this.addProduct}></Button>
                 <ModalDialogContainer 
                     show={this.state.dialogStatus} 
