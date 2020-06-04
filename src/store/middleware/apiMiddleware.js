@@ -7,9 +7,10 @@ import api from '../../shared/apis';
 
 const apiMiddleware = ({ dispatch }) => next => action => {
   next(action);
-  if (action.meta && action.meta.type !== 'API') return;
+  if(action.api == undefined) return;
+  //if (action.meta && action.meta.type !== 'API') return;
 
-  const {url,method,data } = action.meta;
+  const {url,method,data } = action.api;
   dispatch(apiStart);
   
   api.request({
@@ -18,7 +19,10 @@ const apiMiddleware = ({ dispatch }) => next => action => {
       data
     })
     .then(({ data }) => {
-      dispatch({type: action.type,payload:data});
+      setTimeout(()=>{
+        dispatch({type: action.type,payload:data});
+      },3000)
+      
     })
     .catch(error => {
       dispatch(apiError);
@@ -30,7 +34,10 @@ const apiMiddleware = ({ dispatch }) => next => action => {
       // }
     })
     .finally(() => {
-      dispatch(apiEnd);
+      setTimeout(()=>{
+        dispatch(apiEnd);
+      },3000)
+      
     });
 };
 
