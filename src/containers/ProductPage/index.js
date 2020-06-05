@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AddProduct from '../../components/Product/AddProduct';
 import ProductList from '../../components/Product/ProductList';
-import Button from '../../components/UIControls/Button/Button';
 import { ModalDialogContainer } from '../ModalDialog';
 import { getProducts, saveProduct } from './productAction';
+import Button from '../../core/UIControls/Button/Button';
 
 export class ProductPage extends Component {
 

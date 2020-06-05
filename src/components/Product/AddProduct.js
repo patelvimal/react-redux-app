@@ -1,10 +1,10 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import Button from '../UIControls/Button/Button';
-import Checkbox from '../UIControls/Checkbox/Checkbox';
-import Dropdown from '../UIControls/Dropdown/Dropdown';
-import Textarea from '../UIControls/Textarea/Textarea';
-import Textbox from '../UIControls/Textbox/Textbox';
+import Checkbox from '../../core/UIControls/Checkbox/Checkbox';
+import Dropdown from '../../core/UIControls/Dropdown/Dropdown';
+import Textarea from '../../core/UIControls/Textarea/Textarea';
+import Textbox from '../../core/UIControls/Textbox/Textbox';
+import Button from '../../core/UIControls/Button/Button';
 
 function AddProduct(props) {
 
