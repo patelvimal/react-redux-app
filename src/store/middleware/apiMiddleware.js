@@ -26,6 +26,7 @@ const apiMiddleware = ({ dispatch }) => next => action => {
     })
     .catch(error => {
       dispatch(apiError);
+      dispatch({type:'REDIRECT'});
       // dispatch(apiError(error));
       // dispatch(onFailure(error));
 

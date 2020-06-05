@@ -1,12 +1,13 @@
 
 const initial_state = {
-    list: []
+    list: [],
+    redirect:false
 }
 
 const rootReducer = (state = initial_state, action) => {
     switch(action.type) {
-        case '':
-            return { list: action.payload }
+        case 'REDIRECT':
+            return { redirect: true }
         default:
             return state;
     }
